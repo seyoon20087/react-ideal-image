@@ -95,12 +95,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/slorber/docusaurus-react-ideal-image.git"
+    "url": "git+https://github.com/seyoon20087/react-ideal-image.git"
   },
   "bugs": {
-    "url": "https://github.com/slorber/docusaurus-react-ideal-image/issues"
+    "url": "https://github.com/seyoon20087/react-ideal-image/issues"
   },
-  "homepage": "https://github.com/slorber/docusaurus-react-ideal-image#readme",
+  "homepage": "https://github.com/seyoon20087/react-ideal-image#readme",
   "browserslist": {
     "production": [
       ">0.2%",
