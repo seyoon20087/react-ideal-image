@@ -20,13 +20,15 @@
 [![Star on GitHub][github-star-badge]][github-star]
 [![Tweet][twitter-badge]][twitter]
 
-## FOR DOCUSAURUS USERS / MAINTAINERS
+## FOR USERS
 
 This is a fork of an already existing [unmaintained](https://docusaurus.io/blog/2020/01/07/tribute-to-endi) [fork](https://github.com/endiliey/react-ideal-image)...
 
-At some point we'll want to cleanup this and use our own IdealImage component maintained on the Docusaurus repo or org.
+<!-- At some point we'll want to cleanup this and use our own IdealImage component maintained on the Docusaurus repo or org. -->
 
 This new fork was created mainly to solve the hydration errors after upgrading to React 18
+
+Also tweaked to fix issues related to the removal of defaultProps in React 19 (see [here](https://github.com/reactjs/rfcs/blob/createlement-rfc/text/0000-create-element-changes.md#deprecate-defaultprops-on-function-components) for more info).
 
 ## The problem
 
@@ -71,7 +73,7 @@ should be installed as one of your project's `dependencies`:
 npm install react-ideal-image --save
 ```
 
-> This package also depends on `react`, `prop-types`, and `react-waypoint`.
+> This package also depends on `react` and `prop-types`.
 > Please make sure you have those installed as well.
 
 ## Usage

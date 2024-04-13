@@ -32,11 +32,11 @@ describe('FallbackParams', () => {
     const result = fallbackParams(props)
     expect(result).not.toEqual({})
     expect(props.getUrl).toHaveBeenCalledWith({
-      'format': 'jpeg'
-    });
+      format: 'jpeg',
+    })
     expect(props.getUrl).toHaveBeenCalledWith({
-      'format': 'png'
-    });
+      format: 'png',
+    })
     expect(result.ssr).toEqual(true)
   })
 })

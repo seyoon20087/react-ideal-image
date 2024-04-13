@@ -115,9 +115,15 @@ export const selectSrc = ({srcSet, maxImageWidth, supportsWebp}) => {
   let widths = supportedFormat.filter(x => x.width >= maxImageWidth)
   if (widths.length === 0) {
     widths = supportedFormat
-    width = Math.max.apply(null, widths.map(x => x.width))
+    width = Math.max.apply(
+      null,
+      widths.map(x => x.width),
+    )
   } else {
-    width = Math.min.apply(null, widths.map(x => x.width))
+    width = Math.min.apply(
+      null,
+      widths.map(x => x.width),
+    )
   }
   return supportedFormat.filter(x => x.width === width)[0]
 }

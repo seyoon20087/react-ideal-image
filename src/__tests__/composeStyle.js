@@ -6,10 +6,7 @@ describe('composeStyle', () => {
       base: 'base',
       element: 'base__element',
     }
-    const result = compose(
-      theme.base,
-      theme.element,
-    )
+    const result = compose(theme.base, theme.element)
     expect(result.className).toEqual(`${theme.base} ${theme.element}`)
   })
 

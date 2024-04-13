@@ -14,7 +14,10 @@ import {unfetch, UnfetchAbortController} from './unfetch'
  */
 export const combineCancel = (p1, p2) => {
   if (!p2) return p1
-  const result = p1.then(x => x, x => x)
+  const result = p1.then(
+    x => x,
+    x => x,
+  )
   result.cancel = () => {
     p1.cancel()
     p2.cancel()

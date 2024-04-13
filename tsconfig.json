@@ -6,9 +6,9 @@
     "noImplicitReturns": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noEmitOnError": true,
+    "noEmit": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["es2016", "dom"]
   },
-  "include": ["src/__tests__/**.tsx"]
+  "include": ["src/__tests__/**.tsx","src/index.ts"]
 }

@@ -1,4 +1,4 @@
-import {Component, ComponentType, ComponentClass, CSSProperties} from 'react'
+import {ComponentType, ComponentClass, CSSProperties} from 'react'
 
 export type LoadingState = 'initial' | 'loading' | 'loaded' | 'error'
 
@@ -58,14 +58,12 @@ export interface ImageProps {
    * returns false for a 2g network, for a 3g network it decides based on props.threshold
    * and for a 4g network it returns true by default.
    */
-  shouldAutoDownload?: (
-    options: {
-      connection?: 'slow-2g' | '2g' | '3g' | '4g'
-      size?: number
-      threshold?: number
-      possiblySlowNetwork?: boolean
-    },
-  ) => boolean
+  shouldAutoDownload?: (options: {
+    connection?: 'slow-2g' | '2g' | '3g' | '4g'
+    size?: number
+    threshold?: number
+    possiblySlowNetwork?: boolean
+  }) => boolean
   /**
    * This provides an array of sources of different format and size of the image.
    * Read more about it:

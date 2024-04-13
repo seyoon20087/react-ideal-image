@@ -14,11 +14,14 @@ const Icon = ({size = 24, fill = '#000', className, path}) => (
   </svg>
 )
 
-Icon.propTypes = {
-  size: PropTypes.number,
-  fill: PropTypes.string,
-  className: PropTypes.string,
-  path: PropTypes.string.isRequired,
-}
+Icon.propTypes =
+  process.env.NODE_ENV !== 'production'
+    ? {
+        size: PropTypes.number,
+        fill: PropTypes.string,
+        className: PropTypes.string,
+        path: PropTypes.string.isRequired,
+      }
+    : undefined
 
 export default Icon

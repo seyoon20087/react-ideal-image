@@ -1,19 +1,39 @@
 {
   "name": "@slorber/react-ideal-image",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "description": "Adaptive image component",
-  "main": "dist/index.js",
-  "typings": "index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/components/IdealImage": {
+      "require": "./dist/components/IdealImage/index.cjs",
+      "import": "./dist/components/IdealImage/index.mjs"
+    },
+    "./dist/components/IdealImageWithDefaults": {
+      "require": "./dist/components/IdealImageWithDefaults/index.cjs",
+      "import": "./dist/components/IdealImageWithDefaults/index.mjs"
+    },
+    "./dist/components/Media": {
+      "require": "./dist/components/Media/index.cjs",
+      "import": "./dist/components/Media/index.mjs"
+    },
+    "./dist/components/MediaWithDefaults": {
+      "require": "./dist/components/MediaWithDefaults/index.cjs",
+      "import": "./dist/components/MediaWithDefaults/index.mjs"
+    }
+  },
   "publishConfig": {
     "access": "public"
   },
   "engines": {
-    "node": ">= 8.9.0",
-    "npm": "> 3"
+    "node": ">= 12.0.0"
   },
   "scripts": {
     "add-contributor": "kcd-scripts contributors add",
-    "build": "kcd-scripts build",
+    "build": "pkgroll --target=node12.0.0",
     "lint": "kcd-scripts lint",
     "test": "kcd-scripts test",
     "test:update": "npm test -- --updateSnapshot --coverage",
@@ -33,8 +53,7 @@
   "license": "MIT",
   "peerDependencies": {
     "prop-types": ">=15",
-    "react": ">=0.14.x",
-    "react-waypoint": ">=9.0.2"
+    "react": ">=16.x"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.7.4",
@@ -46,6 +65,8 @@
     "gh-pages": "^2.1.1",
     "jest-canvas-mock": "^2.2.0",
     "kcd-scripts": "^1.11.0",
+    "pkgroll": "^2.0.2",
+    "prettier": "^3.2.5",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -53,7 +74,7 @@
     "react-test-renderer": "16.11.0",
     "react-testing-library": "8.0.1",
     "react-waypoint": "^9.0.2",
-    "typescript": "^3.7.2",
+    "typescript": "^5.4.5",
     "webpack": "^4.41.2"
   },
   "eslintConfig": {
