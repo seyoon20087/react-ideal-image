@@ -1,6 +1,6 @@
 {
   "name": "@seyoon20087/react-ideal-image",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Adaptive image component",
   "exports": {
     ".": {
@@ -73,7 +73,7 @@
     "react-styleguidist": "10.2.0",
     "react-test-renderer": "16.11.0",
     "react-testing-library": "8.0.1",
-    "react-waypoint": "^9.0.2",
+    "react-waypoint": "npm:@seyoon20087/react-waypoint@^10.4.1",
     "typescript": "^5.4.5",
     "webpack": "^4.41.2"
   },
